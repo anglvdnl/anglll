@@ -294,7 +294,7 @@ header .hero a {
   z-index: 3;
 }
 .portfolio .portfolio__list .weeding {
-  background-image: url(../../stuff/images/WA.png);
+  background-image: url(../stuff/images/WA.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
