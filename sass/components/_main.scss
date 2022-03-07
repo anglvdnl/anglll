@@ -1,0 +1,261 @@
+@use '../abstracts' as *;
+
+.abme{
+    padding: 20px;
+
+    h1{
+        padding: 80px 0;
+        text-align: center;
+        color: $add;
+    }
+}
+
+.info{
+    display: grid;
+    grid-template-areas: 
+            'fcont scont'
+            'fcont tcont';
+    justify-content: center;
+    align-content: center;
+    grid-gap: 40px 100px;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: auto;
+    font-size: 20px;
+
+    .info__content{
+        padding: 20px;
+        word-wrap: break-word;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        text-align: center;
+        color: $sec;
+
+        &:before {
+            top: -2px;
+            left: -2px;
+            border-top: 2px solid $add3;
+            border-left: 2px solid $add3;
+            transition: 0.5s all;
+          }
+          &:after {
+            top: -2px;
+            right: -2px;
+            border-top: 2px solid $add3;
+            border-right: 2px solid $add3;
+            transition: 0.5s all;
+          }
+
+          p {
+
+            &:before {
+              bottom: -2px;
+              left: -2px;
+              border-bottom: 2px solid $add3;
+              border-left: 2px solid $add3;
+              transition: 0.5s all;
+            }
+            &:after {
+              bottom: 2px;
+              right: -2px;
+              border-bottom: 2px solid $add3;
+              border-right: 2px solid $add3;
+              transition: 0.5s all;
+            }
+          }
+    }
+
+    .info__content, p{
+        &:before,
+        &:after {
+        display: block;
+        content: "";
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        }
+    }
+
+    .fcont{
+        grid-area: fcont;
+
+        span{
+            color: $add2;
+        }
+    }
+
+    .scont{
+        grid-area: scont;
+        span{
+            color: $add3;
+        }
+    }
+
+    .tcont{
+        grid-area: tcont;
+        span{
+            color: $add3;
+        }
+    }
+}
+
+.skills{
+    h1{
+        padding: 80px;
+        text-align: center;
+        color: $add;
+    }
+
+    .skills__content{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+        .soft-skills{
+            color: $sec;
+            margin-top: 10px;
+
+            .soft-skills__list{
+
+                .soft-skills__item{
+                    padding: 20px 0;
+                    position: relative;
+
+                    span{
+                        height: 30px;
+                        width: 30px;
+                        position: absolute;
+                        top: 15px;
+                        right: -50px;
+                        padding: 5px;
+                        border-radius: 50%;
+                        background-color: $add3;
+                        color: $main;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .hard-skills{
+            color: $sec;
+            margin-top: 10px;
+
+            .hard-skills__list{
+
+                .hard-skills__item{
+                    padding: 10px 0;
+                }
+
+                span{
+                    display: inline-block;
+                    height: 15px;
+                    width: 15px;
+                    padding: 5px;
+                    border-radius: 50%;
+                    border: 2px solid $add3;
+                    margin-right: 5px;
+                }
+
+                .checked{
+                    background-color: $add3;
+                }
+            }
+        }
+
+        .skills__line{
+            border-left: 3px solid $add2;
+            border-radius: 20px;
+            height: 450px;
+        }
+    }
+}
+
+.portfolio{
+    color: $sec;
+
+    a{
+        color: $add;
+    }
+
+    h1{
+        padding: 100px 0 50px 0;
+        text-align: center;
+        color: $add;
+    }
+
+    .portfolio__list{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .portfolio__item{
+            border: 2px solid $sec;
+            border-radius: 30px;
+            width: 300px;
+            height: 200px;
+            margin: 20px 0;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around; 
+            align-items: center;     
+            transition: all 0.3s;      
+            
+            p{
+                font-size: 20px;
+                opacity: 0;
+                transition: all 0.3s;
+            }
+
+            a{
+                border: 1px solid $add2;
+                border-radius: 30px;
+                opacity: 0;
+                padding: 10px 20px;
+                transition: all 0.1s cubic-bezier(.27,.24,1,.6);
+
+                &:hover{
+                    background-color: $add2;
+                }
+            }
+
+            .blur{
+                border: 2px solid $sec;
+                border-radius: 30px;
+                width: 300px;
+                height: 200px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                z-index: 2;
+                transition: all 0.6s;  
+            }
+
+            &:hover{
+
+                .blur{
+                    opacity: 0.9;
+                    background-color: $add3;
+                }
+
+                p{
+                    opacity: 1;
+                    z-index: 3;
+                }
+                a{
+                    opacity: 1;
+                    z-index: 3;
+                }
+            }
+        }
+
+        .weeding{
+            background-image: url(../../stuff/images/WA.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left;
+            z-index: 1;
+            position: relative;
+        }
+    }
+}
