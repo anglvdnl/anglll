@@ -6,7 +6,10 @@ header{
         align-items: center;
         justify-content: space-between;
         padding: 20px 20px;
-        border-radius: 0 0 20px 20px;
+
+        .burger-menu-icon{
+            display: none;
+        }
 
         ul{
             display: flex;
@@ -18,7 +21,8 @@ header{
                 position: relative;
                 cursor: pointer;
                 color: $sec;
-
+                max-width: 100%;
+                
                 &:before,
                 &:after {
                 content: '';

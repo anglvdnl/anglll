@@ -20,6 +20,8 @@ body{
 .container{
     margin: 0 auto;
     width: 85%;
+    display: flex;
+    flex-flow: column;
 }
 
 ul{
@@ -30,7 +32,286 @@ h1{
     font-weight: 600;
 }
 
+.heading{
+    font-size: 28px;
+}
+
 a{
     text-decoration: none;
     color: $sec;
+}
+
+@media screen and (max-width: 1250px) {
+    header{
+        .hero{
+            img{
+                height: 500px;
+            }
+        }
+    }
+    main{
+        .portfolio{
+            .portfolio__list{
+                .portfolio__item{
+                    width: 250px;
+                    height: 150px;
+                    .blur{
+                        width: 250px;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    header{
+        .hero{
+            p{
+                font-size: 25px;
+                padding: 80px 0 30px 0;
+            }
+            img{
+                height: 400px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header{
+        nav{
+            ul{
+                li{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .heading{
+        font-size: 24px;
+    }
+    main{
+        .portfolio{
+            .portfolio__list{
+                .portfolio__item{
+                    width: 200px;
+                    height: 100px;
+                    .blur{
+                        width: 200px;
+                        height: 100px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                    a{
+                        padding: 5px 10px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .contacts{
+            .contacts__info{
+                p{
+                    font-size: 15px;
+                    padding: 15px;
+                }
+            }
+            .contacts__sm{
+                i{
+                    font-size: 25px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header{
+        .hero{
+            p{
+                font-size: 20px;
+            }
+            img{
+                height: 300px;
+            }
+        }
+    }
+    .heading{
+        font-size: 24px;
+    }
+    main{
+        .info{
+            grid-gap: 40px 50px;
+            .info__content{
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    footer{
+        .contacts{
+            .contacts__info{
+                p{
+                    font-size: 15px;
+                    padding: 15px;
+                }
+            }
+            .contacts__sm{
+                i{
+                    font-size: 25px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .abme{
+        h1{
+            padding: 0 0 80px 0;
+        }
+    }
+    header{
+        height: 100vh;
+
+        .hero{
+            flex-flow: column;
+            align-items: center;
+            div{
+                text-align: center;
+            }
+        }
+
+        .burger-menu{
+            flex-flow: row-reverse;
+            align-items: flex-start;
+            transition: all 0.3s;
+            padding: 0 0;
+
+            h1{
+                padding: 20px 20px;
+            }
+
+            .burger-ul{
+                display: flex;
+                position: fixed;
+                padding: 100px 50px;
+                z-index: 20;
+                left: -100%;
+                background-color: $sec;
+                flex-flow: column;
+                height: 100vh;
+                transition: all 0.3s;
+
+                ul{
+                    flex-flow: column;
+                    text-align: start;
+
+                    li{
+                        margin: 10px;
+                        &::after{
+                            display: none;
+                        }
+                        &::before{
+                            display: none;
+                        }
+                        text-align: center;
+                        a{
+                            color: $main;
+                        }
+                    }
+                }
+            }
+
+            i{
+                display: none;
+            }
+
+            .burger-menu-icon{
+                display: block;
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index: 30;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: $main;
+          
+                span{
+                  position: absolute;
+                  height: 3px;
+                  width: 30px;
+                  background-color: $sec;
+                  top: 50%;
+                  left: 50%;
+                  transform: scale(1) translate(-50%, -50%);
+          
+                  &::after{
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    height: 3px;
+                    width: 30px;
+                    background-color: $sec;
+                    transition: all 0.2s;
+                  }
+          
+                  &::before{
+                    content: '';
+                    position: absolute;
+                    top: 10px;
+                    height: 3px;
+                    width: 30px;
+                    background-color: $sec;
+                    transition: all 0.2s;
+                  }
+                }
+            }
+        }
+        .burger-menu-active{
+            .burger-menu-icon{
+              span{
+                background-color: transparent;
+              }
+        
+              span::before{
+                top: 0;
+                transform: rotate(45deg);
+              }
+        
+              span::after{
+                top: 0;
+                transform: rotate(-45deg);
+              }
+            }
+            .burger-ul{
+              left: 0%; 
+            }
+        }
+    }
+    main{
+        .info{
+            grid-template-areas: 
+            'fcont '
+            'scont '
+            'tcont ';
+            grid-template-columns: 100%;
+            grid-gap: 30px 0;
+
+            .info__content{
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
 }
