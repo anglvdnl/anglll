@@ -73,7 +73,7 @@ header .hero p span {
   color: #DE541E;
   font-weight: 600;
 }
-header .hero button {
+header .hero a {
   margin: 0 0;
   padding: 10px 10px;
   border: 1px solid #C0E8F9;
@@ -87,9 +87,10 @@ header .hero button {
 
 .abme {
   padding: 20px;
+  height: 100vh;
 }
 .abme h1 {
-  padding: 80px 0;
+  padding: 80px;
   text-align: center;
   color: #C0E8F9;
 }
@@ -166,6 +167,9 @@ header .hero button {
   color: #6153CC;
 }
 
+.skills {
+  height: 100vh;
+}
 .skills h1 {
   padding: 80px;
   text-align: center;
@@ -223,6 +227,7 @@ header .hero button {
 
 .portfolio {
   color: #F4FAFF;
+  height: 100vh;
 }
 .portfolio a {
   color: #C0E8F9;
@@ -297,8 +302,11 @@ header .hero button {
   position: relative;
 }
 
+footer {
+  height: 60vh;
+}
 footer h1 {
-  padding: 100px 0 50px 0;
+  padding: 80px;
   text-align: center;
   color: #C0E8F9;
 }
@@ -349,6 +357,7 @@ h1 {
 
 a {
   text-decoration: none;
+  color: #F4FAFF;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,15 +12,15 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header id="header">
             <nav>
                 <h1 class="nav-logo">anglvdnl</h1>
                 <ul class="nav-list">
-                    <li class="nav-list__item">Home</li>
-                    <li class="nav-list__item">About Me</li>
-                    <li class="nav-list__item">Skills</li>
-                    <li class="nav-list__item">Portfolio</li>
-                    <li class="nav-list__item">Contacts</li>
+                    <li class="nav-list__item"><a href="#header">Home</a></li>
+                    <li class="nav-list__item"><a href="#abme">About Me</a></li>
+                    <li class="nav-list__item"><a href="#skills">Skills</a></li>
+                    <li class="nav-list__item"><a href="#port">Portfolio</a></li>
+                    <li class="nav-list__item"><a href="#contacts">Contacts</a></li>
                 </ul>
                 <i class="fa-solid fa-bolt"></i>
             </nav>
@@ -28,13 +28,13 @@
                 <img src="./stuff/images/me.jpg" alt="myimg">
                 <div>
                     <p>Hello. I'm <span>Daniel</span> <br>Front-End Developer.</p>   
-                    <button>Scroll Down ↓</button>
+                    <a href="#abme">Scroll Down ↓</a>
                 </div>
             </div>
         </header>
         <main>
             <section class="abme">
-                <h1>About me</h1>
+                <h1 id="abme">About me</h1>
                 <div class="info">
                     <div class="info__content fcont"
                         data-aos="fade-right"
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </section>
-            <section class="skills">
+            <section class="skills" id="skills">
                 <h1>My Skills</h1>
                 <div class="skills__content">
                     <div class="soft-skills"
@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </section>
-            <section class="portfolio">
+            <section class="portfolio" id="port">
                 <h1>Portfolio</h1>
                 <div class="portfolio__list">
                     <div class="portfolio__item hovered weeding"
@@ -151,10 +151,42 @@
                         <p>Coming soon</p>
                         <a href="">^_^</a>
                     </div>
+                    <div class="portfolio__item hovered"
+                        data-aos="fade-down"
+                        data-aos-offset="150"
+                        data-aos-duration="700"
+                        data-aos-once="true">
+                        <p>Coming soon</p>
+                        <a href="">^_^</a>
+                    </div>
+                    <div class="portfolio__item hovered"
+                        data-aos="fade-down"
+                        data-aos-offset="150"
+                        data-aos-duration="700"
+                        data-aos-once="true">
+                        <p>Coming soon</p>
+                        <a href="">^_^</a>
+                    </div>
+                    <div class="portfolio__item hovered"
+                        data-aos="fade-down"
+                        data-aos-offset="150"
+                        data-aos-duration="700"
+                        data-aos-once="true">
+                        <p>Coming soon</p>
+                        <a href="">^_^</a>
+                    </div>
+                    <div class="portfolio__item hovered"
+                        data-aos="fade-down"
+                        data-aos-offset="150"
+                        data-aos-duration="700"
+                        data-aos-once="true">
+                        <p>Coming soon</p>
+                        <a href="">^_^</a>
+                    </div>
                 </div>
             </section>
         </main>
-        <footer>
+        <footer id="contacts">
             <h1>Get in touch</h1>
             <div class="contacts">
                 <div  class="contacts__info">
@@ -176,5 +208,10 @@
     <script>
         AOS.init();
     </script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 </html>
