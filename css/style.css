@@ -332,6 +332,7 @@ footer .contacts .contacts__sm i {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.3s;
 }
 
 body {
@@ -395,22 +396,6 @@ a {
 
   .heading {
     font-size: 24px;
-  }
-
-  main .portfolio .portfolio__list .portfolio__item {
-    width: 200px;
-    height: 100px;
-  }
-  main .portfolio .portfolio__list .portfolio__item .blur {
-    width: 200px;
-    height: 100px;
-  }
-  main .portfolio .portfolio__list .portfolio__item p {
-    font-size: 15px;
-  }
-  main .portfolio .portfolio__list .portfolio__item a {
-    padding: 5px 10px;
-    font-size: 12px;
   }
 
   footer .contacts .contacts__info p {
