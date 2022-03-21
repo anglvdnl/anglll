@@ -108,9 +108,12 @@
     .skills__content{
         display: flex;
         justify-content: space-evenly;
+        text-align: center;
+        
 
         .soft-skills{
             color: $sec;
+            width: 14rem;
 
             .soft-skills__list{
                 .soft-skills__item{
@@ -135,6 +138,8 @@
 
         .hard-skills{
             color: $sec;
+            width: 14rem;
+
 
             .hard-skills__list{
                 margin-right: 20px;

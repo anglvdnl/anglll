@@ -177,9 +177,11 @@ header .hero a {
 .skills .skills__content {
   display: flex;
   justify-content: space-evenly;
+  text-align: center;
 }
 .skills .skills__content .soft-skills {
   color: #F4FAFF;
+  width: 14rem;
 }
 .skills .skills__content .soft-skills .soft-skills__list .soft-skills__item {
   display: flex;
@@ -199,6 +201,7 @@ header .hero a {
 }
 .skills .skills__content .hard-skills {
   color: #F4FAFF;
+  width: 14rem;
 }
 .skills .skills__content .hard-skills .hard-skills__list {
   margin-right: 20px;
