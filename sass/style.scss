@@ -12,7 +12,6 @@
 }
 
 body{
-    background-color: $sec;
     color: $main;
     font-family: 'Montserrat', sans-serif;
     background-color: $main;
@@ -175,7 +174,7 @@ a{
 
         .burger-menu{
             flex-flow: row-reverse;
-            align-items: flex-start;
+            align-items: baseline;
             transition: all 0.3s;
             padding: 0 0;
 
@@ -189,14 +188,13 @@ a{
                 padding: 100px 50px;
                 z-index: 20;
                 left: -100%;
-                background-color: $sec;
+                background-color: #202020;
                 flex-flow: column;
                 height: 100vh;
                 transition: all 0.3s;
 
                 ul{
                     flex-flow: column;
-                    text-align: start;
 
                     li{
                         margin: 10px;
@@ -208,7 +206,7 @@ a{
                         }
                         text-align: center;
                         a{
-                            color: $main;
+                            color: $sec;
                         }
                     }
                 }
@@ -293,6 +291,47 @@ a{
             .info__content{
                 p{
                     font-size: 15px;
+                }
+            }
+        }
+
+        .skills{
+            .skills__content{
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+
+                .soft-skills{
+                    width: 10rem;
+
+                    .soft-skills__list{
+                        .soft-skills__item{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 10px 0;
+        
+                            span{
+                                margin-left: 20px;
+                                height: 2em;
+                                width: 2em;
+                                padding: 5px;
+                                border-radius: 50%;
+                                background-color: $add3;
+                                color: $main;
+                                font-weight: 600;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+
+                .skills__line{
+                    border-top: 3px solid $add2;
+                    border-radius: 20px;
+                    width: 80vw;
+                    height: auto;
+                    margin: 20px 0;
                 }
             }
         }

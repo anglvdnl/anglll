@@ -339,7 +339,6 @@ footer .contacts .contacts__sm i {
 }
 
 body {
-  background-color: #F4FAFF;
   color: #24252A;
   font-family: "Montserrat", sans-serif;
   background-color: #24252A;
@@ -455,7 +454,7 @@ a {
   }
   header .burger-menu {
     flex-flow: row-reverse;
-    align-items: flex-start;
+    align-items: baseline;
     transition: all 0.3s;
     padding: 0 0;
   }
@@ -468,14 +467,13 @@ a {
     padding: 100px 50px;
     z-index: 20;
     left: -100%;
-    background-color: #F4FAFF;
+    background-color: #202020;
     flex-flow: column;
     height: 100vh;
     transition: all 0.3s;
   }
   header .burger-menu .burger-ul ul {
     flex-flow: column;
-    text-align: start;
   }
   header .burger-menu .burger-ul ul li {
     margin: 10px;
@@ -488,7 +486,7 @@ a {
     display: none;
   }
   header .burger-menu .burger-ul ul li a {
-    color: #24252A;
+    color: #F4FAFF;
   }
   header .burger-menu i {
     display: none;
@@ -553,6 +551,38 @@ a {
   }
   main .info .info__content p {
     font-size: 15px;
+  }
+  main .skills .skills__content {
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .skills .skills__content .soft-skills {
+    width: 10rem;
+  }
+  main .skills .skills__content .soft-skills .soft-skills__list .soft-skills__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  main .skills .skills__content .soft-skills .soft-skills__list .soft-skills__item span {
+    margin-left: 20px;
+    height: 2em;
+    width: 2em;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #6153CC;
+    color: #24252A;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  main .skills .skills__content .skills__line {
+    border-top: 3px solid #DE541E;
+    border-radius: 20px;
+    width: 80vw;
+    height: auto;
+    margin: 20px 0;
   }
 }
 
