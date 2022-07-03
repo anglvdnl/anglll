@@ -641,6 +641,9 @@ body .container footer .contacts .contacts__sm i {
   body .container main h1 {
     padding: 0 0 80px 0;
   }
+  body .container main .abme h1 {
+    padding: 40px;
+  }
   body .container main .abme .info {
     -ms-grid-rows: auto 30px auto 30px auto;
         grid-template-areas: "fcont " "scont " "tcont ";
