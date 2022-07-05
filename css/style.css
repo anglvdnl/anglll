@@ -351,7 +351,7 @@ body .container .skills .skills__content .hard-skills .hard-skills__list .hard-s
   border-radius: 20px;
   padding: 20px;
   max-width: 380px;
-  z-index: 2;
+  z-index: 5;
   background-color: #24252a;
 }
 body .container .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item .info ul {
@@ -813,18 +813,15 @@ body .container .copyright {
   body .container main .skills .skills__content .hard-skills {
     width: 10rem;
   }
-  body .container main .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item .info {
-    -webkit-transform: translateY(-50%) translateX(0);
-            transform: translateY(-50%) translateX(0);
-    left: 100px;
-    top: 50%;
-  }
   body .container main .skills .skills__content .skills__line {
     border-top: 3px solid #de541e;
     border-radius: 20px;
     width: 80vw;
     height: auto;
     margin: 20px 0;
+  }
+  body .container main .portfolio h1 {
+    padding-top: 150px;
   }
   body .container main .abme .info > .fcont {
     -ms-grid-row: 1;
