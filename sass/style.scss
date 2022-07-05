@@ -284,22 +284,102 @@ body {
 
                     .hard-skills__list {
                         margin-right: 20px;
+
                         .hard-skills__item {
-                            padding: 10px 0;
-                        }
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            padding: 15px 0;
+                            position: relative;
 
-                        span {
-                            display: inline-block;
-                            height: 15px;
-                            width: 15px;
-                            padding: 5px;
-                            border-radius: 50%;
-                            border: 2px solid #6153cc;
-                            margin-right: 5px;
-                        }
+                            span {
+                                height: 20px;
+                                width: 20px;
+                                border-radius: 50%;
+                                background-color: #6153cc;
+                                margin-left: 10px;
+                                cursor: pointer;
+                                box-shadow: 0 0 0 rgba($color: #6153cc, $alpha: 0.4);
+                                animation: pulse 2s infinite;
 
-                        .checked {
-                            background-color: #6153cc;
+                                i {
+                                    color: #24252a;
+                                }
+
+                                &:hover {
+                                    animation: none;
+                                }
+
+                                &:hover + .info {
+                                    display: inline-block;
+                                }
+                            }
+
+                            .info {
+                                display: none;
+                                position: absolute;
+                                left: 50%;
+                                top: 50px;
+                                transform: translateX(-50%);
+                                border: 1px solid #6153cc;
+                                border-radius: 20px;
+                                padding: 20px;
+                                max-width: 380px;
+                                z-index: 2;
+                                background-color: #24252a;
+
+                                ul {
+                                    display: flex;
+                                    float: left;
+                                    flex-flow: column;
+                                    align-items: flex-start;
+
+                                    p {
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+                                    li {
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        white-space: nowrap;
+
+                                        &::before {
+                                            content: "\2022";
+                                            color: #6153cc;
+                                            font-weight: bold;
+                                            display: inline-block;
+                                            width: 2em;
+                                            margin-left: -1em;
+                                        }
+                                    }
+                                }
+                            }
+
+                            @-webkit-keyframes pulse {
+                                0% {
+                                    -webkit-box-shadow: 0 0 0 0 rgba($color: #6153cc, $alpha: 0.4);
+                                }
+                                70% {
+                                    -webkit-box-shadow: 0 0 0 10px rgba($color: #6153cc, $alpha: 0);
+                                }
+                                100% {
+                                    -webkit-box-shadow: 0 0 0 0 rgba($color: #6153cc, $alpha: 0);
+                                }
+                            }
+                            @keyframes pulse {
+                                0% {
+                                    -moz-box-shadow: 0 0 0 0 rgba($color: #6153cc, $alpha: 0.4);
+                                    box-shadow: 0 0 0 0 rgba($color: #6153cc, $alpha: 0.4);
+                                }
+                                70% {
+                                    -moz-box-shadow: 0 0 0 10px rgba($color: #6153cc, $alpha: 0);
+                                    box-shadow: 0 0 0 10px rgba($color: #6153cc, $alpha: 0);
+                                }
+                                100% {
+                                    -moz-box-shadow: 0 0 0 0 rgba($color: #6153cc, $alpha: 0);
+                                    box-shadow: 0 0 0 0 rgba($color: #6153cc, $alpha: 0);
+                                }
+                            }
                         }
                     }
                 }
@@ -314,13 +394,14 @@ body {
 
         .portfolio {
             color: #f4faff;
+            padding-bottom: 100px;
 
             a {
                 color: #c0e8f9;
             }
 
             h1 {
-                padding: 80px;
+                padding: 100px 0 50px 0;
                 text-align: center;
                 color: #c0e8f9;
             }
@@ -402,6 +483,18 @@ body {
                         opacity: 0;
                     }
                 }
+
+                .map {
+                    background-image: url(../stuff/images/MP.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: left;
+                    z-index: 1;
+                    position: relative;
+                    p {
+                        opacity: 0;
+                    }
+                }
             }
         }
 
@@ -430,6 +523,11 @@ body {
                     }
                 }
             }
+        }
+        .copyright{
+            color: #f4faff;
+            text-align: center;
+            margin: 10px 0;
         }
     }
 }
@@ -475,6 +573,24 @@ body {
                     }
                     img {
                         height: 400px;
+                    }
+                }
+            }
+
+            main {
+                .skills {
+                    .skills__content {
+                        .hard-skills {
+                            .hard-skills__list {
+                                .hard-skills__item {
+                                    span {
+                                    }
+                                    .info {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -546,6 +662,22 @@ body {
                         .info__content {
                             p {
                                 font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+                .skills {
+                    .skills__content {
+                        .hard-skills {
+                            .hard-skills__list {
+                                .hard-skills__item {
+                                    span {
+                                    }
+                                    .info {
+                                        font-size: 12px;
+                                    }
+                                }
                             }
                         }
                     }
@@ -697,7 +829,7 @@ body {
                     padding: 0 0 80px 0;
                 }
                 .abme {
-                    h1{
+                    h1 {
                         padding: 40px;
                     }
                     .info {
@@ -743,6 +875,21 @@ body {
                                         color: #24252a;
                                         font-weight: 600;
                                         font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .hard-skills {
+                            width: 10rem;
+                            .hard-skills__list {
+                                .hard-skills__item {
+                                    span {
+                                    }
+                                    .info {
+                                        transform: translateY(-50%) translateX(0);
+                                        left: 100px;
+                                        top: 50%;
                                     }
                                 }
                             }

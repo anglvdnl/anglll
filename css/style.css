@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;500&display=swap");
 * {
   padding: 0;
@@ -305,19 +306,112 @@ body .container .skills .skills__content .hard-skills .hard-skills__list {
   margin-right: 20px;
 }
 body .container .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item {
-  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  position: relative;
 }
-body .container .skills .skills__content .hard-skills .hard-skills__list span {
-  display: inline-block;
-  height: 15px;
-  width: 15px;
-  padding: 5px;
+body .container .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item span {
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
-  border: 2px solid #6153cc;
-  margin-right: 5px;
-}
-body .container .skills .skills__content .hard-skills .hard-skills__list .checked {
   background-color: #6153cc;
+  margin-left: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 rgba(97, 83, 204, 0.4);
+          box-shadow: 0 0 0 rgba(97, 83, 204, 0.4);
+  -webkit-animation: pulse 2s infinite;
+          animation: pulse 2s infinite;
+}
+body .container .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item span i {
+  color: #24252a;
+}
+body .container .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item span:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+body .container .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item span:hover + .info {
+  display: inline-block;
+}
+body .container .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item .info {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 1px solid #6153cc;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 380px;
+  z-index: 2;
+  background-color: #24252a;
+}
+body .container .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item .info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+body .container .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item .info ul p {
+  margin: 0;
+  padding: 0;
+}
+body .container .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item .info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  white-space: nowrap;
+}
+body .container .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item .info ul li::before {
+  content: "•";
+  color: #6153cc;
+  font-weight: bold;
+  display: inline-block;
+  width: 2em;
+  margin-left: -1em;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(97, 83, 204, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(97, 83, 204, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(97, 83, 204, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(97, 83, 204, 0.4);
+            box-shadow: 0 0 0 0 rgba(97, 83, 204, 0.4);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(97, 83, 204, 0);
+            box-shadow: 0 0 0 10px rgba(97, 83, 204, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(97, 83, 204, 0);
+            box-shadow: 0 0 0 0 rgba(97, 83, 204, 0);
+  }
 }
 body .container .skills .skills__content .skills__line {
   border-left: 3px solid #de541e;
@@ -326,12 +420,13 @@ body .container .skills .skills__content .skills__line {
 }
 body .container .portfolio {
   color: #f4faff;
+  padding-bottom: 100px;
 }
 body .container .portfolio a {
   color: #c0e8f9;
 }
 body .container .portfolio h1 {
-  padding: 80px;
+  padding: 100px 0 50px 0;
   text-align: center;
   color: #c0e8f9;
 }
@@ -423,6 +518,17 @@ body .container .portfolio .portfolio__list .weeding {
 body .container .portfolio .portfolio__list .weeding p {
   opacity: 0;
 }
+body .container .portfolio .portfolio__list .map {
+  background-image: url(../stuff/images/MP.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  z-index: 1;
+  position: relative;
+}
+body .container .portfolio .portfolio__list .map p {
+  opacity: 0;
+}
 body .container footer .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -447,6 +553,11 @@ body .container footer .contacts .contacts__sm i {
   color: #f4faff;
   padding: 20px;
 }
+body .container .copyright {
+  color: #f4faff;
+  text-align: center;
+  margin: 10px 0;
+}
 
 @media screen and (max-width: 1250px) {
   body .container header .hero img {
@@ -468,6 +579,9 @@ body .container footer .contacts .contacts__sm i {
   }
   body .container header .hero img {
     height: 400px;
+  }
+  body .container main .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item .info {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -501,6 +615,9 @@ body .container footer .contacts .contacts__sm i {
   }
   body .container main .abme .info .info__content p {
     font-size: 18px;
+  }
+  body .container main .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item .info {
+    font-size: 12px;
   }
   body .container footer .contacts .contacts__info p {
     font-size: 15px;
@@ -692,6 +809,15 @@ body .container footer .contacts .contacts__sm i {
     color: #24252a;
     font-weight: 600;
     font-size: 12px;
+  }
+  body .container main .skills .skills__content .hard-skills {
+    width: 10rem;
+  }
+  body .container main .skills .skills__content .hard-skills .hard-skills__list .hard-skills__item .info {
+    -webkit-transform: translateY(-50%) translateX(0);
+            transform: translateY(-50%) translateX(0);
+    left: 100px;
+    top: 50%;
   }
   body .container main .skills .skills__content .skills__line {
     border-top: 3px solid #de541e;
